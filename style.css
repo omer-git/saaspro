@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary:#6366f1;
+    --secondary:#8b5cf6;
+    --text:#ffffff;
+}
+
+[data-theme="ocean"] { --primary:#0ea5e9; --secondary:#06b6d4; }
+[data-theme="sunset"] { --primary:#f97316; --secondary:#ef4444; }
+
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:var(--text);
+    min-height:100vh;
+    transition:background .5s ease;
+}
+
+.navbar-glass{
+    backdrop-filter:blur(20px);
+    background:rgba(0,0,0,0.4);
+}
+
+.hero{
+    padding:120px 20px;
+    text-align:center;
+}
+
+.card-premium{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    margin:20px 0;
+}
+
+.settings-panel{
+    position:fixed;
+    top:50%;
+    right:20px;
+    transform:translateY(-50%);
+    background:#ffffff;
+    color:#000;
+    padding:20px;
+    border-radius:20px;
+}
