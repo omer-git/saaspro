@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>index</title>
+
+<script>
+(function(){
+ const s=JSON.parse(localStorage.getItem("saas_settings"))||{};
+ if(s.theme)document.documentElement.setAttribute("data-theme",s.theme);
+ const d=s.direction===0?"rtl":"ltr";
+ document.documentElement.setAttribute("dir",d);
+})();
+</script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top">
+<div class="container">
+<a class="navbar-brand" href="index.html">SaaSPro</a>
+</div>
+</nav>
+
+<div style="margin-top:100px">
+<section class='hero'><h1>Production SaaS (GitHub Pages)</h1><p>Fully Static & Deploy Ready</p></section>
+</div>
+
+<div class="settings-panel">
+<h6>Theme</h6>
+<button data-theme="default" class="btn btn-sm btn-primary mb-1">Default</button>
+<button data-theme="ocean" class="btn btn-sm btn-info mb-1">Ocean</button>
+<button data-theme="sunset" class="btn btn-sm btn-warning mb-1">Sunset</button>
+<hr>
+<button id="directionSwitch" class="btn btn-dark btn-sm btn-block">Toggle RTL</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/settings.js"></script>
+
+</body>
+</html>
